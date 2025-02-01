@@ -77,7 +77,7 @@ button:hover {
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
   body {
-      background: url('recursos/minoviamovil.webp') no-repeat center center fixed;
+      background: url('recursos/minoviamovilprueba.jpeg') no-repeat center center fixed;
       background-size: cover;
   }
   
