@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #ff69b4; /* Texto rosado */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a2a2a; /* Un poco más claro que el fondo */
+    border-bottom: 2px solid #ff69b4;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white; /* Texto blanco */
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 40px #ff69b4; /* Efecto neon rosado */
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    color: white; /* Texto blanco */
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4; /* Efecto neon rosado */
+}
+
+/* Galería de fotos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photo-card {
+    background-color: #2a2a2a;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px #ff69b4; /* Efecto neon */
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(20px); /* Desplazamiento inicial */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Efecto de zoom al hacer hover */
+}
+
+.photo-card .description {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ff69b4;
+    transition: color 0.3s ease; /* Cambio de color al hacer hover */
+}
+
+/* Efecto hover en las cartas */
+.photo-card:hover {
+    box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4; /* Efecto neon más intenso */
+}
+
+.photo-card:hover img {
+    transform: scale(1.05); /* Zoom en la imagen */
+}
+
+.photo-card:hover .description {
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Clase para el efecto de aparición */
+.photo-card.fade-in {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Sin desplazamiento */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-top: 2px solid #ff69b4;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    color: #ff69b4;
+}

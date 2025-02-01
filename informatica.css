@@ -1,0 +1,120 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('recursos/minovia.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-container {
+  background-color: transparent; /* Fondo completamente transparente */
+  padding: 20px;
+  box-shadow: none; /* Sin sombra */
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  color: #fff;
+}
+
+h2, label, p {
+  color: white; /* Centro blanco */
+  text-shadow: 0 0 5px #9400D3, 0 0 10px #9400D3, 0 0 15px #9400D3, 0 0 20px #9400D3; /* Borde morado neón */
+  animation: neonGlowText 1.5s infinite alternate;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #1a1a1a; /* Fondo negro para destacar el neón */
+  color: white; /* Centro blanco */
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #39FF14, 0 0 25px #39FF14, 0 0 50px #39FF14, 0 0 100px #39FF14; /* Borde verde neón */
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+#errorMessage {
+  color: white; /* Centro blanco */
+  font-weight: bold;
+  text-shadow: 0 0 5px #9400D3, 0 0 10px #9400D3, 0 0 15px #9400D3, 0 0 20px #9400D3; /* Borde morado neón */
+  animation: neonGlowText 1.5s infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes neonGlow {
+  from {
+      box-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14, 0 0 20px #39FF14;
+  }
+  to {
+      box-shadow: 0 0 20px #39FF14, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14;
+  }
+}
+
+@keyframes neonGlowText {
+  from {
+      text-shadow: 0 0 5px #9400D3, 0 0 10px #9400D3, 0 0 15px #9400D3, 0 0 20px #9400D3;
+  }
+  to {
+      text-shadow: 0 0 20px #9400D3, 0 0 30px #9400D3, 0 0 40px #9400D3, 0 0 50px #9400D3;
+  }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  body {
+      background: url('recursos/minoviamovil.jpg') no-repeat center center fixed;
+      background-size: cover;
+  }
+  
+  .login-container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  input, button {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 1.5em;
+  }
+
+  label {
+      font-size: 1em;
+  }
+
+  input, button {
+      padding: 8px;
+      font-size: 1em;
+  }
+}
